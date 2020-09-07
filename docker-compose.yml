@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  mongo:
+    container_name: mongo
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - mongodata:/data/db
+      - ./mongod.conf:/etc/mongo/mongod.conf
+    ports:
+      - 27017:27017
+volumes:
+  mongodata:
