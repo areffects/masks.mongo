@@ -1,0 +1,2 @@
+# masks.mongo
+MongoDB
